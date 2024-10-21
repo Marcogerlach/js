@@ -1,59 +1,101 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PST Webseite</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            flex-direction: column;
-            background-color: #9da9aa;
-        }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PST Webseite</title>
+		<style>
+			body {
+				display: flex;
+				justify-content: start;
+				align-items: center;
+				height: 100vh;
+				margin: 0;
+				font-family: Arial, sans-serif;
+				flex-direction: column;
+				background-color: #9da9aa;
+			}
 
-        h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            text-align: center;
-        }
+			h1 {
+				font-size: 2.5rem;
+				margin: 0;
+				text-align: center;
+			}
 
-        p {
-            margin-top: 10px;
-            font-style: italic;
-            color: #ff0000;
-        }
+			p {
+				margin-top: 10px;
+				font-style: italic;
+				color: #ff0000;
+			}
 
-        .unterschrift{
-            color: black;
-        }
+			.unterschrift {
+				color: black;
+			}
 
-        .hh{display: flex; flex-direction: row;}
-    </style>
-    <script src="./test.js"></script>
-</head>
-<body>
-    <h1>Das ist die PST Webseite!</h1>
-    <p class="unterschrift">Hier finden sie heraus ob es sich für sie lohnt sich eine PV-Anlage anzuschaffen!</p>
-    <p>In der Entwicklung</p>
-    <div>
-        <h4>Wo Wohnen sie:</h4>
-        <div class="hh">
-            <form>
-                <input type="radio" id="mietwohnung" name="haush" value="mietwohnung">
-                <label for="mietwohnung">Mietwohnung</label><br>
-                <input type="radio" id="eigentumswohnung" name="haush" value="eigentumswohnung">
-                <label for="eigentumswohnung">Eigentumswohnung</label><br>
-                <input type="radio" id="eigenheim" name="haush" value="eigenheim">
-                <label for="eigenheim">Eigenheim</label><br>
-                <input type="radio" id="wohngemeinschaft" name="haush" value="wohngemeinschaft">
-                <label for="wohngemeinschaft">Wohngemeinschaft</label>
-            </form>
-        </div>
-    </div>
-</body>
+			.hh {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				gap: 200px;
+			}
+			.btndiv {
+				display: flex;
+				justify-content: center;
+				margin-top: 100px;
+			}
+			.btnhight {
+				padding: 32px 20px;
+				background-color: rgb(133, 114, 199);
+				cursor: pointer;
+			}
+			.btnhight:hover {
+				background-color: #48ff00;
+			}
+		</style>
+		<script src="./test.js"></script>
+	</head>
+	<body>
+		<h1>Das ist die PST Webseite!</h1>
+		<p class="unterschrift">Hier finden sie heraus ob es sich für sie lohnt sich eine PV-Anlage anzuschaffen!</p>
+		<p>In der Entwicklung</p>
+		<div>
+			<div>
+				<div class="hh">
+					<div>
+						<h4>
+							In welchen Wohnverhältnissen <br />
+							leben sie:
+						</h4>
+						<form>
+							<input type="radio" id="mietwohnung" name="haush" value="mietwohnung" />
+							<label for="mietwohnung">Mietwohnung</label><br />
+							<input type="radio" id="eigentumswohnung" name="haush" value="eigentumswohnung" />
+							<label for="eigentumswohnung">Eigentumswohnung</label><br />
+							<input type="radio" id="eigenheim" name="haush" value="eigenheim" />
+							<label for="eigenheim">Eigenheim</label><br />
+							<input type="radio" id="wohngemeinschaft" name="haush" value="wohngemeinschaft" />
+							<label for="wohngemeinschaft">Wohngemeinschaft</label>
+						</form>
+					</div>
+					<div>
+						<h4>Wo wohnen sie?</h4>
+						<br />
+						<form>
+							<input type="radio" id="berlin" name="wohnort" value="berlin" />
+							<label for="berlin">Berlin</label><br />
+							<input type="radio" id="brandenburg_a_h" name="wohnort" value="brandenburg_a_h" />
+							<label for="brandenburg_a_h">Brandenburg an der Havel</label><br />
+							<input type="radio" id="potsdam" name="wohnort" value="potsdam" />
+							<label for="potsdam">Potsdam</label><br />
+							<input type="radio" id="sonstiges" name="wohnort" value="sonstiges" />
+							<label for="sonstiges">sonstiges</label>
+						</form>
+					</div>
+				</div>
+				<div class="btndiv">
+					<button class="btnhight">Berechen</button>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
